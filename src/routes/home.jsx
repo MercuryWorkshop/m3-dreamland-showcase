@@ -1,4 +1,4 @@
-import { Icon, Card, Button, ButtonLink, Switch, CardClickable, SegmentedButtonContainer, SegmentedButtonItem } from 'm3-dreamland';
+import { Icon, FAB, Card, Button, ButtonLink, Switch, CardClickable, SegmentedButtonContainer, SegmentedButtonItem } from 'm3-dreamland';
 import iconCode from '@ktibow/iconset-material-symbols/code';
 import iconTriangle from '@ktibow/iconset-material-symbols/change-history-outline';
 import iconSquare from '@ktibow/iconset-material-symbols/square-outline';
@@ -59,23 +59,24 @@ const Home = function() {
 				</Card>
 			</Card>
 			<Card type="outlined">
-				Hiii :3
-				<CardClickable type="elevated">
-					Hiii
-				</CardClickable>
-				<CardClickable type="filled">
-					Hiii
-				</CardClickable>
-				<CardClickable type="outlined">
-					Hiii
-				</CardClickable>
+				<p class="buttons">
+					<CardClickable type="elevated">
+						Hiii
+					</CardClickable>
+					<CardClickable type="filled">
+						Hiii
+					</CardClickable>
+					<CardClickable type="outlined">
+						Hiii
+					</CardClickable>
+				</p>
 			</Card>
 			<Card type="filled">
-				<p>
+				<p class="buttons">
 					<ButtonLink type="elevated" iconType="left" href="https://dreamland.js.org"><Icon icon={iconCode} />Dreamland</ButtonLink>
 					<ButtonLink type="tonal" iconType="full" href="https://dreamland.js.org"><Icon icon={iconCode} /></ButtonLink>
 				</p>
-				<p>
+				<p class="buttons">
 					<ButtonLink type="elevated" href="https://dreamland.js.org">Dreamland</ButtonLink>
 					<ButtonLink type="filled" href="https://dreamland.js.org">Dreamland</ButtonLink>
 					<ButtonLink type="tonal" href="https://dreamland.js.org">Dreamland</ButtonLink>
@@ -88,9 +89,32 @@ const Home = function() {
 			</Card>
 			<Card type="filled">
 				<SegmentedPlayground multiSelect={true} />
+				<br />
+				<SegmentedPlayground multiSelect={false} />
 			</Card>
 			<Card type="filled">
-				<SegmentedPlayground multiSelect={false} />
+				<p class="buttons">
+					<FAB color="primary" icon={iconCode} text="The Code" />
+					<FAB color="surface" icon={iconCode} text="The Code" />
+					<FAB color="secondary" icon={iconCode} text="The Code" />
+					<FAB color="tertiary" icon={iconCode} text="The Code" />
+				</p>
+			</Card>
+			<Card type="filled">
+				<p class="buttons">
+					<FAB size="large" color="primary" icon={iconCode} />
+					<FAB size="large" color="surface" icon={iconCode} />
+					<FAB size="large" color="secondary" icon={iconCode} />
+					<FAB size="large" color="tertiary" icon={iconCode} />
+				</p>
+			</Card>
+			<Card type="filled">
+				<p class="buttons">
+					<FAB size="small" color="primary" icon={iconCode} text="The Code" />
+					<FAB size="small" color="surface" icon={iconCode} text="The Code" />
+					<FAB size="small" color="secondary" icon={iconCode} text="The Code" />
+					<FAB size="small" color="tertiary" icon={iconCode} text="The Code" />
+				</p>
 			</Card>
 		</div>
 	);
