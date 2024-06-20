@@ -1,4 +1,4 @@
-import { Card, Button, ButtonLink, CardClickable } from 'm3-dreamland';
+import { Card, Button, ButtonLink, Switch, CardClickable } from 'm3-dreamland';
 
 // javascript syntax for defining components
 const Home = function() {
@@ -51,6 +51,9 @@ const Home = function() {
 					<ButtonLink type="outlined" href="https://dreamland.js.org">Dreamland</ButtonLink>
 					<ButtonLink type="text" href="https://dreamland.js.org">Dreamland</ButtonLink>
 				</p>
+			</Card>
+			<Card type="filled">
+				<Switch></Switch>
 			</Card>
 		</div>
 	);
