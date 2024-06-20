@@ -1,4 +1,4 @@
-import { Icon, FAB, Card, Button, ButtonLink, Switch, CardClickable, SegmentedButtonContainer, SegmentedButtonItem } from 'm3-dreamland';
+import { Icon, FAB, CircularProgress, CircularProgressIndeterminate, LinearProgress, LinearProgressIndeterminate, Card, Button, ButtonLink, Switch, CardClickable, SegmentedButtonContainer, SegmentedButtonItem } from 'm3-dreamland';
 import iconCode from '@ktibow/iconset-material-symbols/code';
 import iconTriangle from '@ktibow/iconset-material-symbols/change-history-outline';
 import iconSquare from '@ktibow/iconset-material-symbols/square-outline';
@@ -59,7 +59,7 @@ const Home = function() {
 				</Card>
 			</Card>
 			<Card type="outlined">
-				<p class="buttons">
+				<div class="buttons">
 					<CardClickable type="elevated">
 						Hiii
 					</CardClickable>
@@ -69,7 +69,7 @@ const Home = function() {
 					<CardClickable type="outlined">
 						Hiii
 					</CardClickable>
-				</p>
+				</div>
 			</Card>
 			<Card type="filled">
 				<p class="buttons">
@@ -93,30 +93,40 @@ const Home = function() {
 				<SegmentedPlayground multiSelect={false} />
 			</Card>
 			<Card type="filled">
-				<p class="buttons">
+				<div class="buttons">
 					<FAB color="primary" icon={iconCode} text="The Code" />
 					<FAB color="surface" icon={iconCode} text="The Code" />
 					<FAB color="secondary" icon={iconCode} text="The Code" />
 					<FAB color="tertiary" icon={iconCode} text="The Code" />
-				</p>
+				</div>
 			</Card>
 			<Card type="filled">
-				<p class="buttons">
+				<div class="buttons">
 					<FAB size="large" color="primary" icon={iconCode} />
 					<FAB size="large" color="surface" icon={iconCode} />
 					<FAB size="large" color="secondary" icon={iconCode} />
 					<FAB size="large" color="tertiary" icon={iconCode} />
-				</p>
+				</div>
 			</Card>
 			<Card type="filled">
-				<p class="buttons">
+				<div class="buttons">
 					<FAB size="small" color="primary" icon={iconCode} text="The Code" />
 					<FAB size="small" color="surface" icon={iconCode} text="The Code" />
 					<FAB size="small" color="secondary" icon={iconCode} text="The Code" />
 					<FAB size="small" color="tertiary" icon={iconCode} text="The Code" />
-				</p>
+				</div>
 			</Card>
-		</div>
+			<Card type="filled">
+				<p class="buttons">
+					<CircularProgress percent={61} />
+					<CircularProgressIndeterminate />
+				</p>
+				<div class="buttons">
+					<LinearProgress percent={61} />
+					<LinearProgressIndeterminate />
+				</div>
+			</Card >
+		</div >
 	);
 };
 
