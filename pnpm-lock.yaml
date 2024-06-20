@@ -8,11 +8,14 @@ importers:
 
   .:
     dependencies:
+      '@ktibow/iconset-material-symbols':
+        specifier: ^0.0.1717653083
+        version: 0.0.1717653083
       dreamland:
-        specifier: ^0.0.22-pre
-        version: 0.0.22-pre
+        specifier: ^0.0.22
+        version: 0.0.22
       dreamland-router:
-        specifier: https://github.com/mercuryworkshop/dreamland-router
+        specifier: github:mercuryworkshop/dreamland-router
         version: https://codeload.github.com/mercuryworkshop/dreamland-router/tar.gz/62d68c84107b971dd6f28797ad75597321f91d20
       m3-dreamland:
         specifier: link:../m3-dreamland
@@ -21,11 +24,11 @@ importers:
         specifier: ^0.36.0
         version: 0.36.0(rollup@4.18.0)(typescript@5.4.5)
       vite-plugin-dreamland:
-        specifier: ^1.2.0
+        specifier: ^1.2.1
         version: 1.2.1
     devDependencies:
       vite:
-        specifier: ^5.2.11
+        specifier: ^5.3.1
         version: 5.3.1
 
 packages:
@@ -168,6 +171,12 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@iconify/types@2.0.0':
+    resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
+
+  '@ktibow/iconset-material-symbols@0.0.1717653083':
+    resolution: {integrity: sha512-BgBEmUTwJ6UCS4qb72ciB/JbJndnUG9sPaPqY9krai6YNsE2On7lw/uk79VSS47HXbwEGuxOE1oT2xIbNmYU6A==}
+
   '@rollup/pluginutils@4.2.1':
     resolution: {integrity: sha512-iKnFXr7NkdZAIHiIWE+BX5ULi/ucVFYWD6TbAV+rZctiRTY2PL6tsIKhoIOaoskiWAkgu+VsbXgUVDNLHf+InQ==}
     engines: {node: '>= 8.0.0'}
@@ -262,8 +271,8 @@ packages:
     resolution: {tarball: https://codeload.github.com/mercuryworkshop/dreamland-router/tar.gz/62d68c84107b971dd6f28797ad75597321f91d20}
     version: 1.0.1
 
-  dreamland@0.0.22-pre:
-    resolution: {integrity: sha512-CKIg0reYAzh46fBi197enoUdkzVV/N8yNohpD/v7JiABnXdQm0qrWD1kB9dmOtz4uce9MVjMGwASomqs/bzAQQ==}
+  dreamland@0.0.22:
+    resolution: {integrity: sha512-ev7vXJLlVNK6a6rrN+tK16QRpSbyMDBnVrLDIRAp2C6osh5nvMjnqoAUqNtIzRiOoL2bMVh48NN1KKEHFldPNQ==}
 
   esbuild@0.21.5:
     resolution: {integrity: sha512-mg3OPMV4hXywwpoDxu3Qda5xCKQi+vCTZq8S9J/EpkhB2HzKXq4SNFZE3+NK93JYxc8VMSep+lOUSC/RVKaBqw==}
@@ -478,6 +487,12 @@ snapshots:
   '@esbuild/win32-x64@0.21.5':
     optional: true
 
+  '@iconify/types@2.0.0': {}
+
+  '@ktibow/iconset-material-symbols@0.0.1717653083':
+    dependencies:
+      '@iconify/types': 2.0.0
+
   '@rollup/pluginutils@4.2.1':
     dependencies:
       estree-walker: 2.0.2
@@ -537,7 +552,7 @@ snapshots:
 
   dreamland-router@https://codeload.github.com/mercuryworkshop/dreamland-router/tar.gz/62d68c84107b971dd6f28797ad75597321f91d20: {}
 
-  dreamland@0.0.22-pre: {}
+  dreamland@0.0.22: {}
 
   esbuild@0.21.5:
     optionalDependencies:
