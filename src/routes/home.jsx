@@ -1,4 +1,4 @@
-import { Icon, FAB, CircularProgress, CircularProgressIndeterminate, LinearProgress, LinearProgressIndeterminate, Card, Button, ButtonLink, Switch, CardClickable, SegmentedButtonContainer, SegmentedButtonItem } from 'm3-dreamland';
+import { Icon, FAB, CheckboxAnim, Checkbox, CircularProgress, CircularProgressIndeterminate, LinearProgress, LinearProgressIndeterminate, Card, Button, ButtonLink, Switch, CardClickable, SegmentedButtonContainer, SegmentedButtonItem } from 'm3-dreamland';
 import iconCode from '@ktibow/iconset-material-symbols/code';
 import iconTriangle from '@ktibow/iconset-material-symbols/change-history-outline';
 import iconSquare from '@ktibow/iconset-material-symbols/square-outline';
@@ -21,7 +21,7 @@ const SegmentedPlayground = function() {
 				<SegmentedButtonContainer>
 					<SegmentedButtonItem name="segmented-b" input="segmented-b-0" icon={iconTriangle} checked={true}>Tab A</SegmentedButtonItem>
 					<SegmentedButtonItem name="segmented-b" input="segmented-b-1" icon={iconSquare}>Tab B</SegmentedButtonItem>
-					<SegmentedButtonItem name="segmented-b" input="segmented-b-2" icon={iconCircle} disabled={true}>Tab C</SegmentedButtonItem>
+					<SegmentedButtonItem name="segmented-b" input="segmented-b-2" icon={iconCircle}>Tab C</SegmentedButtonItem>
 				</SegmentedButtonContainer>
 			</div>
 		)
@@ -41,6 +41,7 @@ const Home = function() {
 			display: flex;
 			flex-direction: row;
 			column-gap: 1em;
+			align-items: center;
 		}
 	`;
 
@@ -85,12 +86,17 @@ const Home = function() {
 				</p>
 			</Card>
 			<Card type="filled">
-				<Switch></Switch>
+				<div class="buttons">
+					<Switch />
+					<CheckboxAnim><input type="checkbox" /></CheckboxAnim>
+					<Checkbox><input type="checkbox" /></Checkbox>
+				</div>
 			</Card>
 			<Card type="filled">
-				<SegmentedPlayground multiSelect={true} />
-				<br />
-				<SegmentedPlayground multiSelect={false} />
+				<div class="buttons">
+					<SegmentedPlayground multiSelect={true} />
+					<SegmentedPlayground multiSelect={false} />
+				</div>
 			</Card>
 			<Card type="filled">
 				<div class="buttons">
@@ -117,11 +123,9 @@ const Home = function() {
 				</div>
 			</Card>
 			<Card type="filled">
-				<p class="buttons">
+				<div class="buttons">
 					<CircularProgress percent={61} />
 					<CircularProgressIndeterminate />
-				</p>
-				<div class="buttons">
 					<LinearProgress percent={61} />
 					<LinearProgressIndeterminate />
 				</div>
