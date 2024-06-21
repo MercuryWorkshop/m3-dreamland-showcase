@@ -1,5 +1,6 @@
 import { Icon, FAB, ChipChooser, CheckboxAnim, Checkbox, CircularProgress, CircularProgressIndeterminate, LinearProgress, LinearProgressIndeterminate, Card, Button, ButtonLink, Switch, CardClickable, SegmentedButtonContainer, SegmentedButtonItem } from 'm3-dreamland';
 import iconCode from '@ktibow/iconset-material-symbols/code';
+import iconPets from '@ktibow/iconset-material-symbols/pets';
 import iconTriangle from '@ktibow/iconset-material-symbols/change-history-outline';
 import iconSquare from '@ktibow/iconset-material-symbols/square-outline';
 import iconCircle from '@ktibow/iconset-material-symbols/circle-outline';
@@ -21,6 +22,7 @@ const SegmentedPlayground = function() {
 				<SegmentedButtonContainer>
 					<SegmentedButtonItem name="segmented-b" input="segmented-b-0" icon={iconTriangle} checked={true}>Tab A</SegmentedButtonItem>
 					<SegmentedButtonItem name="segmented-b" input="segmented-b-1" icon={iconSquare}>Tab B</SegmentedButtonItem>
+					<SegmentedButtonItem name="segmented-b" input="segmented-b-2" icon={iconCircle}>Tab C</SegmentedButtonItem>
 					<SegmentedButtonItem name="segmented-b" input="segmented-b-2" icon={iconCircle}>Tab C</SegmentedButtonItem>
 				</SegmentedButtonContainer>
 			</div>
