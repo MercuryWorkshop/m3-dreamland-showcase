@@ -1,5 +1,6 @@
-import { Icon, FAB, CheckboxAnim, Checkbox, CircularProgress, CircularProgressIndeterminate, LinearProgress, LinearProgressIndeterminate, Card, Button, ButtonLink, Switch, CardClickable, SegmentedButtonContainer, SegmentedButtonItem } from 'm3-dreamland';
+import { Icon, FAB, ChipChooser, CheckboxAnim, Checkbox, CircularProgress, CircularProgressIndeterminate, LinearProgress, LinearProgressIndeterminate, Card, Button, ButtonLink, Switch, CardClickable, SegmentedButtonContainer, SegmentedButtonItem } from 'm3-dreamland';
 import iconCode from '@ktibow/iconset-material-symbols/code';
+import iconPets from '@ktibow/iconset-material-symbols/pets';
 import iconTriangle from '@ktibow/iconset-material-symbols/change-history-outline';
 import iconSquare from '@ktibow/iconset-material-symbols/square-outline';
 import iconCircle from '@ktibow/iconset-material-symbols/circle-outline';
@@ -31,6 +32,7 @@ const SegmentedPlayground = function() {
 // javascript syntax for defining components
 const Home = function() {
 	this.counter = 0;
+	this.chipsChosen = [];
 
 	this.css = `
 		display: flex;
@@ -129,7 +131,12 @@ const Home = function() {
 					<LinearProgress percent={61} />
 					<LinearProgressIndeterminate />
 				</div>
-			</Card >
+			</Card>
+			<Card type="filled">
+				<div class="m3-font-headline-medium">Options</div>
+				<br />
+				<ChipChooser options={[{ label: "Proxathon", value: "proxathon", icon: iconCode }, { label: "DAMN CSS", value: "damncss", icon: iconCode }, { label: "frogOS", value: "frogos", icon: iconPets }]} bind:chosenOptions={use(this.chipsChosen)}></ChipChooser>
+			</Card>
 		</div >
 	);
 };
