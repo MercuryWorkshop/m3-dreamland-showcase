@@ -6,6 +6,10 @@ import iconCircle from '@ktibow/iconset-material-symbols/circle-outline';
 import { RadioAnim1 } from 'm3-dreamland';
 import { RadioAnim2 } from 'm3-dreamland';
 import { RadioAnim3 } from 'm3-dreamland';
+import { NavDrawer } from 'm3-dreamland';
+import { NavDrawerButton } from 'm3-dreamland';
+import { NavList } from 'm3-dreamland';
+import { NavListButton } from 'm3-dreamland';
 
 const SegmentedPlayground = function() {
 	if (this.multiSelect) {
@@ -321,6 +325,22 @@ const Home = function() {
 						<RadioAnim3><input type="radio" name="radio3" /></RadioAnim3>
 					</div>
 				</p>
+			</Card>
+			<Card type="elevated">
+				<NavDrawer>
+					<NavDrawerButton icon={iconCode} selected={true}>The Code 1</NavDrawerButton>
+					<NavDrawerButton icon={iconCode}>The Code 2</NavDrawerButton>
+					<NavDrawerButton icon={iconCode}>The Code 3</NavDrawerButton>
+					<NavDrawerButton icon={iconCode}>The Code 4</NavDrawerButton>
+				</NavDrawer>
+			</Card>
+			<Card type="elevated">
+				<NavList>
+					<NavListButton icon={iconCode} selected={true}>The Code 1</NavListButton>
+					<NavListButton icon={iconCode}>The Code 2</NavListButton>
+					<NavListButton icon={iconCode}>The Code 3</NavListButton>
+					<NavListButton icon={iconCode}>The Code 4</NavListButton>
+				</NavList>
 			</Card>
 		</div>
 	);
