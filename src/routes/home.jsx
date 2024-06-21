@@ -1,6 +1,5 @@
 import { Icon, FAB, ChipChooser, CheckboxAnim, Checkbox, CircularProgress, CircularProgressIndeterminate, LinearProgress, LinearProgressIndeterminate, Card, Button, ButtonLink, Switch, CardClickable, SegmentedButtonContainer, SegmentedButtonItem } from 'm3-dreamland';
 import iconCode from '@ktibow/iconset-material-symbols/code';
-import iconPets from '@ktibow/iconset-material-symbols/pets';
 import iconTriangle from '@ktibow/iconset-material-symbols/change-history-outline';
 import iconSquare from '@ktibow/iconset-material-symbols/square-outline';
 import iconCircle from '@ktibow/iconset-material-symbols/circle-outline';
@@ -64,6 +63,32 @@ const Home = function() {
 			display: flex;
 			flex-direction: row;
 			column-gap: 1em;
+			align-items: center;
+		}
+
+		.flex {
+			display: flex;
+			&.hcenter {
+				justify-content: center;
+			}
+			&.vcenter {
+				align-items: center;
+			}
+			&.row {
+				flex-direction: row;
+			}
+			&.column {
+				flex-direction: column;
+			}
+			&.gap {
+				gap: 1.5em;
+			}
+			&.gap-md {
+				gap: 1em;
+			}
+			&.gap-sm {
+				gap: 0.5em;
+			}
 		}
 
 		.flex {
