@@ -50,7 +50,6 @@ const Home = function() {
 		gap: 1em;
 
 		h1 {
-			font-variation-settings: "wdth" 110;
 			font-weight: 750;
 			font-size: 2.5rem;
 		}
@@ -128,6 +127,7 @@ const Home = function() {
 			<Card type="elevated">
 				<h1>M3-Dreamland Showcase</h1>
 				<p>This is a showcase of the <a href="https://github.com/MercuryWorkshop/m3-dreamland" target="_blank" rel="noopener noreferrer">m3-dreamland</a> library, which implements Google's <a href="https://m3.material.io" target="_blank" rel="noopener noreferrer">Material Design 3</a> for use with the <a href="https://dreamland.js.org" target="_blank" rel="noopener noreferrer">dreamland.js</a> framework.</p>
+				<p>It is based on the <a href="https://ktibow.github.io/m3-svelte" target="_blank" rel="noopener noreferrer">m3-svelte</a> project.</p>
 			</Card>
 			<Card type="elevated" id="reactivity">
 				<h2>Reactivity</h2>
