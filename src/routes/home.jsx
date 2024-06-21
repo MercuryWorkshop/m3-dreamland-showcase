@@ -22,7 +22,6 @@ const SegmentedPlayground = function() {
 					<SegmentedButtonItem name="segmented-b" input="segmented-b-0" icon={iconTriangle} checked={true}>Tab A</SegmentedButtonItem>
 					<SegmentedButtonItem name="segmented-b" input="segmented-b-1" icon={iconSquare}>Tab B</SegmentedButtonItem>
 					<SegmentedButtonItem name="segmented-b" input="segmented-b-2" icon={iconCircle}>Tab C</SegmentedButtonItem>
-					<SegmentedButtonItem name="segmented-b" input="segmented-b-2" icon={iconCircle}>Tab C</SegmentedButtonItem>
 				</SegmentedButtonContainer>
 			</div>
 		)
