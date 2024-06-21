@@ -1,8 +1,11 @@
-import { Icon, FAB, ChipChooser, CheckboxAnim, Checkbox, CircularProgress, CircularProgressIndeterminate, LinearProgress, LinearProgressIndeterminate, Card, Button, ButtonLink, Switch, CardClickable, SegmentedButtonContainer, SegmentedButtonItem } from 'm3-dreamland';
+import { Icon, FAB, ChipChooser, CheckboxAnim, Checkbox, CircularProgress, CircularProgressIndeterminate, LinearProgress, LinearProgressIndeterminate, Card, Button, ButtonLink, Switch, CardClickable, SegmentedButtonContainer, SegmentedButtonItem, Divider } from 'm3-dreamland';
 import iconCode from '@ktibow/iconset-material-symbols/code';
 import iconTriangle from '@ktibow/iconset-material-symbols/change-history-outline';
 import iconSquare from '@ktibow/iconset-material-symbols/square-outline';
 import iconCircle from '@ktibow/iconset-material-symbols/circle-outline';
+import { RadioAnim1 } from 'm3-dreamland';
+import { RadioAnim2 } from 'm3-dreamland';
+import { RadioAnim3 } from 'm3-dreamland';
 
 const SegmentedPlayground = function() {
 	if (this.multiSelect) {
@@ -165,7 +168,7 @@ const Home = function() {
 						<ButtonLink type="text" href="https://dreamland.js.org">Text</ButtonLink>
 					</p>
 				</Card>
-				<h3>Regular</h3>
+				<h3>MAB Regular</h3>
 				<Card type="filled">
 					<div class="buttons">
 						<FAB color="primary" icon={iconCode} text="Primary" />
@@ -174,7 +177,7 @@ const Home = function() {
 						<FAB color="tertiary" icon={iconCode} text="Teritary" />
 					</div>
 				</Card>
-				<h3>Large</h3>
+				<h3>MAB Large</h3>
 				<Card type="filled">
 					<div class="buttons">
 						<FAB size="large" color="primary" icon={iconCode} />
@@ -183,7 +186,7 @@ const Home = function() {
 						<FAB size="large" color="tertiary" icon={iconCode} />
 					</div>
 				</Card>
-				<h3>Small</h3>
+				<h3>MAB Small</h3>
 				<Card type="filled">
 					<div class="buttons">
 						<FAB size="small" color="primary" icon={iconCode} text="Primary" />
@@ -193,36 +196,36 @@ const Home = function() {
 					</div>
 				</Card>
 			</Card>
-			<Card type="filled" id="switches">
+			<Card type="elevated" id="switches">
 				<h2>Switches</h2>
 				<p class="flex vcenter gap-md">
-				<Switch></Switch> Switch
+					<Switch></Switch> Switch
 				</p>
 				<p class="flex vcenter gap-md">
-				<CheckboxAnim><input type="checkbox" /></CheckboxAnim> Animated Checkbox
+					<CheckboxAnim><input type="checkbox" /></CheckboxAnim> Animated Checkbox
 				</p>
 				<p class="flex vcenter gap-md">
-				<Checkbox><input type="checkbox" /></Checkbox> Checkbox
+					<Checkbox><input type="checkbox" /></Checkbox> Checkbox
 				</p>
 			</Card>
 			<Card type="elevated" id="segmented">
 				<h2>Segmented Controls</h2>
 				<div style={`display: grid; grid-template-columns: repeat(2, 1fr); gap: 1em;`}>
 					<p>
-					<h3>Single-Select</h3>
-					<Card type="filled">
-						<p style="height: 3rem;">
-							<SegmentedPlayground multiSelect={false} />
-						</p>
-					</Card>
+						<h3>Single-Select</h3>
+						<Card type="filled">
+							<p style="height: 3rem;">
+								<SegmentedPlayground multiSelect={false} />
+							</p>
+						</Card>
 					</p>
 					<p>
-					<h3>Multi-Select</h3>
-					<Card type="filled">
-						<p style="height: 3rem;">
-						<SegmentedPlayground multiSelect={true} />
-						</p>
-					</Card>
+						<h3>Multi-Select</h3>
+						<Card type="filled">
+							<p style="height: 3rem;">
+								<SegmentedPlayground multiSelect={true} />
+							</p>
+						</Card>
 					</p>
 				</div>
 			</Card>
@@ -271,7 +274,55 @@ const Home = function() {
 				<h2>Options</h2>
 				<ChipChooser options={[{ label: "Things", value: "op1", icon: iconCode }, { label: "More things", value: "op2", icon: iconCode }, { label: "ALL THE THINGS!!!", value: "op3", icon: iconCode }]} bind:chosenOptions={use(this.chipsChosen)}></ChipChooser>
 			</Card>
-		</div >
+			<Card type="elevated">
+				<h2>Divider</h2>
+				<p>
+					It's primarily their college age siblings, or the kids who graduated, are taking programming classes, and are still friends with the high school aged kids. Watching our ~40,000 kids, very few it's rarer than most people would think. I always feel the need to point it out, because everyone around where I work assumes all children from the age of 6 is some kind of super hacker. It gets super annoying talking to the teaching staff who insist their kids are geniuses because their older sibling told them to turn on airplane mode to avoid being seen in Securly Classroom.
+				</p>
+				<Divider inset={true} />
+				<p>
+					Today, I want to talk to you about our Lord and Savior, OlyB. He is the embodiment of love, compassion, and forgiveness. His teachings have the power to change lives and bring hope to those who are lost.
+
+					OlyB's message is simple yet profound: love your neighbor as yourself, forgive those who wronged you, and seek peace in all your endeavors. He showed us that through faith and devotion, we can overcome any obstacle and find salvation in his embrace.
+
+					But OlyB's love is not limited to a select few. He welcomes everyone, regardless of their background, race, or social status. He sees beyond our flaws and recognizes the goodness in our hearts. His grace is boundless, and his mercy is infinite.
+
+					So, my dear brothers and sisters, let us follow OlyB's example and spread his message of love and hope to those around us. Let us be the light in the darkness and the salt of the earth. Let us embrace his teachings with open hearts and minds, and let us live our lives in accordance with his will.
+
+					May OlyB bless us all, now and forevermore. Amen.
+				</p>
+				<Divider />
+				<p>
+					I AM FURIOUS WITH TITANIUM NETWORK FOR BREAKING THE NOW.GG ROBLOX SITE ON THEIR WEB PROXIES. I HAVE BEEN A LOYAL CUSTOMER FOR YEARS AND THIS IS UNACCEPTABLE. I HAVE CONTACTED CUSTOMER SUPPORT SEVERAL TIMES AND THEY HAVE BEEN USELESS. FIX THIS ISSUE NOW OR I WILL STOP DONATING TO THE HOLY UNBLOCKER PATREON
+				</p>
+			</Card>
+			<Card type="elevated">
+				<p>
+					<div>RadioAnim1</div>
+					<div class="buttons">
+						<RadioAnim1><input type="radio" name="radio1" /></RadioAnim1>
+						<RadioAnim1><input type="radio" name="radio1" /></RadioAnim1>
+						<RadioAnim1><input type="radio" name="radio1" /></RadioAnim1>
+					</div>
+				</p>
+				<p>
+					<div>RadioAnim2</div>
+					<div class="buttons">
+						<RadioAnim2><input type="radio" name="radio2" /></RadioAnim2>
+						<RadioAnim2><input type="radio" name="radio2" /></RadioAnim2>
+						<RadioAnim2><input type="radio" name="radio2" /></RadioAnim2>
+					</div>
+				</p>
+				<p>
+					<div>RadioAnim3</div>
+					<div class="buttons">
+						<RadioAnim3><input type="radio" name="radio3" /></RadioAnim3>
+						<RadioAnim3><input type="radio" name="radio3" /></RadioAnim3>
+						<RadioAnim3><input type="radio" name="radio3" /></RadioAnim3>
+					</div>
+				</p>
+			</Card>
+		</div>
 	);
 };
 
