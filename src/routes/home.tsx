@@ -1,24 +1,17 @@
-import { Icon, FAB, ChipChooser, CheckboxAnim, Checkbox, CircularProgress, CircularProgressIndeterminate, LinearProgress, LinearProgressIndeterminate, Card, Button, ButtonLink, Switch, CardClickable, SegmentedButtonContainer, SegmentedButtonItem, Divider } from 'm3-dreamland';
+import { Tabs, Icon, FAB, ChipChooser, CheckboxAnim, Checkbox, CircularProgress, CircularProgressIndeterminate, LinearProgress, LinearProgressIndeterminate, Card, Button, ButtonLink, Switch, CardClickable, SegmentedButtonContainer, SegmentedButtonItem, Divider, RadioAnim1, RadioAnim2, RadioAnim3, NavDrawer, NavDrawerButton, NavList, NavListButton, TextField, TextFieldMultiline, Dialog, ListItem, ListItemLabel, ListItemButton, List, ListItemCheckbox } from 'm3-dreamland';
 import iconCode from '@ktibow/iconset-material-symbols/code';
 import iconTriangle from '@ktibow/iconset-material-symbols/change-history-outline';
 import iconSquare from '@ktibow/iconset-material-symbols/square-outline';
 import iconCircle from '@ktibow/iconset-material-symbols/circle-outline';
-import { RadioAnim1 } from 'm3-dreamland';
-import { RadioAnim2 } from 'm3-dreamland';
-import { RadioAnim3 } from 'm3-dreamland';
-import { NavDrawer } from 'm3-dreamland';
-import { NavDrawerButton } from 'm3-dreamland';
-import { NavList } from 'm3-dreamland';
-import { NavListButton } from 'm3-dreamland';
 
-const SegmentedPlayground = function() {
+const SegmentedPlayground: Component<{ multiSelect: boolean }, {}> = function() {
 	if (this.multiSelect) {
 		return (
 			<div>
 				<SegmentedButtonContainer>
-					<SegmentedButtonItem type="checkbox" input="segmented-a-0" checked={true}>$</SegmentedButtonItem>
-					<SegmentedButtonItem type="checkbox" input="segmented-a-1">$$</SegmentedButtonItem>
-					<SegmentedButtonItem type="checkbox" input="segmented-a-2" disabled={true}>$$$</SegmentedButtonItem>
+					<SegmentedButtonItem type="checkbox" name="segmented-a" input="segmented-a-0" checked={true}>$</SegmentedButtonItem>
+					<SegmentedButtonItem type="checkbox" name="segmented-a" input="segmented-a-1">$$</SegmentedButtonItem>
+					<SegmentedButtonItem type="checkbox" name="segmented-a" input="segmented-a-2" disabled={true}>$$$</SegmentedButtonItem>
 				</SegmentedButtonContainer>
 			</div>
 		)
@@ -26,22 +19,55 @@ const SegmentedPlayground = function() {
 		return (
 			<div>
 				<SegmentedButtonContainer>
-					<SegmentedButtonItem name="segmented-b" input="segmented-b-0" icon={iconTriangle} checked={true}>Tab A</SegmentedButtonItem>
-					<SegmentedButtonItem name="segmented-b" input="segmented-b-1" icon={iconSquare}>Tab B</SegmentedButtonItem>
-					<SegmentedButtonItem name="segmented-b" input="segmented-b-2" icon={iconCircle}>Tab C</SegmentedButtonItem>
+					<SegmentedButtonItem type="radio" name="segmented-b" input="segmented-b-0" icon={iconTriangle} checked={true}>Tab A</SegmentedButtonItem>
+					<SegmentedButtonItem type="radio" name="segmented-b" input="segmented-b-1" icon={iconSquare}>Tab B</SegmentedButtonItem>
+					<SegmentedButtonItem type="radio" name="segmented-b" input="segmented-b-2" icon={iconCircle} disabled={true}>Tab C</SegmentedButtonItem>
 				</SegmentedButtonContainer>
 			</div>
 		)
 	}
 }
 
+const TextfieldPlayground: Component<{}, { errored: boolean, disabled: boolean, val: string, name: string }> = function() {
+	this.errored = false;
+	this.disabled = false;
+	this.val = "";
+	this.name = "Name";
+	return (
+		<div>
+			<div>Errored <Switch bind:checked={use(this.errored)} /></div>
+			<div>Disabled <Switch bind:checked={use(this.disabled)} /></div>
+			<div><TextField bind:value={use(this.name)} name="Name of textfield" /></div>
+			<TextField bind:error={use(this.errored)} bind:disabled={use(this.disabled)} bind:value={use(this.val)} bind:name={use(this.name)} />
+			<TextFieldMultiline bind:error={use(this.errored)} bind:disabled={use(this.disabled)} bind:value={use(this.val)} bind:name={use(this.name)} />
+		</div>
+	)
+}
+
 // javascript syntax for defining components
-const Home = function() {
+const Home: Component<{}, {
+	counter: number,
+
+	progress: number,
+
+	chipsChosen: string[],
+
+	currentTab0: string,
+	currentTab1: string,
+	currentTab2: string,
+
+	dialogOpen: boolean,
+}> = function() {
 	this.counter = 0;
 
 	this.progress = 69;
 
 	this.chipsChosen = [];
+	this.currentTab0 = "op1";
+	this.currentTab1 = "op1";
+	this.currentTab2 = "op1";
+
+	this.dialogOpen = false;
 
 	this.css = `
 		font-family: 'Roboto Flex', Roboto, RobotoDraft, 'Droid Sans', system-ui, sans-serif;
@@ -129,7 +155,7 @@ const Home = function() {
 				<p>This is a showcase of the <a href="https://github.com/MercuryWorkshop/m3-dreamland" target="_blank" rel="noopener noreferrer">m3-dreamland</a> library, which implements Google's <a href="https://m3.material.io" target="_blank" rel="noopener noreferrer">Material Design 3</a> for use with the <a href="https://dreamland.js.org" target="_blank" rel="noopener noreferrer">dreamland.js</a> framework.</p>
 				<p>It is based on the <a href="https://ktibow.github.io/m3-svelte" target="_blank" rel="noopener noreferrer">m3-svelte</a> project.</p>
 			</Card>
-			<Card type="elevated" id="reactivity">
+			<Card type="elevated">
 				<h2>Reactivity</h2>
 				<p class="buttons">
 					<Button type="elevated" on:click={() => this.counter++}>Click me!</Button>
@@ -142,7 +168,7 @@ const Home = function() {
 					{use(this.counter)}
 				</Card>
 			</Card>
-			<Card type="outlined" id="cards">
+			<Card type="outlined">
 				<h2>Cards</h2>
 				<div class="buttons">
 					<CardClickable type="elevated">
@@ -156,7 +182,7 @@ const Home = function() {
 					</CardClickable>
 				</div>
 			</Card>
-			<Card type="elevated" id="buttons">
+			<Card type="elevated">
 				<h2>Buttons</h2>
 				<h3>Link</h3>
 				<Card type="filled">
@@ -200,7 +226,7 @@ const Home = function() {
 					</div>
 				</Card>
 			</Card>
-			<Card type="elevated" id="switches">
+			<Card type="elevated">
 				<h2>Switches</h2>
 				<p class="flex vcenter gap-md">
 					<Switch></Switch> Switch
@@ -212,7 +238,7 @@ const Home = function() {
 					<Checkbox><input type="checkbox" /></Checkbox> Checkbox
 				</p>
 			</Card>
-			<Card type="elevated" id="segmented">
+			<Card type="elevated">
 				<h2>Segmented Controls</h2>
 				<div style={`display: grid; grid-template-columns: repeat(2, 1fr); gap: 1em;`}>
 					<p>
@@ -233,7 +259,7 @@ const Home = function() {
 					</p>
 				</div>
 			</Card>
-			<Card type="elevated" id="progress">
+			<Card type="elevated">
 				<h2>Progress</h2>
 				{/* This doesn't work yet, since I'm obviously too retarded -- fish */}
 				<span class="flex row gap-sm vcenter">
@@ -335,12 +361,45 @@ const Home = function() {
 				</NavDrawer>
 			</Card>
 			<Card type="elevated">
-				<NavList>
-					<NavListButton icon={iconCode} selected={true}>The Code 1</NavListButton>
-					<NavListButton icon={iconCode}>The Code 2</NavListButton>
-					<NavListButton icon={iconCode}>The Code 3</NavListButton>
-					<NavListButton icon={iconCode}>The Code 4</NavListButton>
+				<NavList type="auto">
+					<NavListButton type="auto" icon={iconCode} selected={true}>The Code 1</NavListButton>
+					<NavListButton type="auto" icon={iconCode}>The Code 2</NavListButton>
+					<NavListButton type="auto" icon={iconCode}>The Code 3</NavListButton>
+					<NavListButton type="auto" icon={iconCode}>The Code 4</NavListButton>
 				</NavList>
+			</Card>
+			<Card type="elevated">
+				<p>
+					<Tabs items={[{ name: "Things", value: "op1", icon: iconCode }, { name: "More things", value: "op2", icon: iconCode }, { name: "ALL THE THINGS!!!", value: "op3", icon: iconCode }]} bind:tab={use(this.currentTab0)}></Tabs>
+				</p>
+				<p>
+					<Tabs items={[{ name: "Things", value: "op1", icon: iconCode }, { name: "More things", value: "op2", icon: iconCode }, { name: "ALL THE THINGS!!!", value: "op3", icon: iconCode }]} bind:tab={use(this.currentTab1)} secondary={true}></Tabs>
+				</p>
+			</Card>
+			<Card type="elevated">
+				<TextfieldPlayground />
+			</Card>
+			<Card type="elevated">
+				<Button type="tonal" on:click={() => { this.dialogOpen = !this.dialogOpen }}>Open dialog</Button>
+				<Dialog headline="m3-dreamland... WINS!!" closeOnClick={false} bind:open={use(this.dialogOpen)}>
+					<span>M3-dreamland on top!!!</span>
+					<span><Button type="text" on:click={() => { this.dialogOpen = !this.dialogOpen }}>Goog..</Button></span>
+				</Dialog>
+			</Card>
+			<Card type="elevated">
+				<List>
+					<ListItem headline="This is a headline" />
+					<Divider />
+					<ListItemLabel headline="This is an animated checkbox label headline">
+						<ListItemCheckbox><CheckboxAnim><input type="checkbox" /></CheckboxAnim></ListItemCheckbox>
+					</ListItemLabel>
+					<Divider />
+					<ListItemLabel headline="This is a checkbox label headline">
+						<ListItemCheckbox><Checkbox><input type="checkbox" /></Checkbox></ListItemCheckbox>
+					</ListItemLabel>
+					<Divider />
+					<ListItemButton headline="This is a button headline" />
+				</List>
 			</Card>
 		</div>
 	);
