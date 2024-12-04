@@ -12,14 +12,14 @@ importers:
         specifier: ^0.0.1728668628
         version: 0.0.1728668628
       dreamland:
-        specifier: link:../../dreamlandjs
-        version: link:../../dreamlandjs
+        specifier: github:mercuryworkshop/dreamlandjs
+        version: https://codeload.github.com/mercuryworkshop/dreamlandjs/tar.gz/7239299486bdc2169686740c3853c3a674c9a4c5
       dreamland-router:
         specifier: github:mercuryworkshop/dreamland-router
         version: https://codeload.github.com/mercuryworkshop/dreamland-router/tar.gz/4a5bb22dbaa1268159a8e3485200d1d7372483be
       m3-dreamland:
-        specifier: link:../m3-dreamland
-        version: link:../m3-dreamland
+        specifier: github:mercuryworkshop/m3-dreamland
+        version: https://codeload.github.com/mercuryworkshop/m3-dreamland/tar.gz/8976b36b8f0b04532262b2f94bd9a9018cb719a2
       rollup-plugin-typescript2:
         specifier: ^0.36.0
         version: 0.36.0(rollup@4.24.0)(typescript@5.6.3)
@@ -180,6 +180,12 @@ packages:
   '@ktibow/iconset-material-symbols@0.0.1728668628':
     resolution: {integrity: sha512-uJGNJ3w/q+hgxo8cZZxTYhnTm7MqjR8lYffS+DSCVq6jv9V9s71etivdPKvkFqTHRJE3u/1n1Ce3KE2nTV29Eg==}
 
+  '@ktibow/iconset-material-symbols@0.0.1731742403':
+    resolution: {integrity: sha512-WH5oyRmufVX/wRjJIMwgWcAxnmwMtUAt7QRhXIRZvnmC9cVfkZ+y5WAzpwLpT+94Fat8nHr8t8aVus9O4M16KQ==}
+
+  '@material/material-color-utilities@0.3.0':
+    resolution: {integrity: sha512-ztmtTd6xwnuh2/xu+Vb01btgV8SQWYCaK56CkRK8gEkWe5TuDyBcYJ0wgkMRn+2VcE9KUmhvkz+N9GHrqw/C0g==}
+
   '@rollup/pluginutils@4.2.1':
     resolution: {integrity: sha512-iKnFXr7NkdZAIHiIWE+BX5ULi/ucVFYWD6TbAV+rZctiRTY2PL6tsIKhoIOaoskiWAkgu+VsbXgUVDNLHf+InQ==}
     engines: {node: '>= 8.0.0'}
@@ -274,6 +280,10 @@ packages:
     resolution: {tarball: https://codeload.github.com/mercuryworkshop/dreamland-router/tar.gz/4a5bb22dbaa1268159a8e3485200d1d7372483be}
     version: 2.0.0
 
+  dreamland@https://codeload.github.com/mercuryworkshop/dreamlandjs/tar.gz/7239299486bdc2169686740c3853c3a674c9a4c5:
+    resolution: {tarball: https://codeload.github.com/mercuryworkshop/dreamlandjs/tar.gz/7239299486bdc2169686740c3853c3a674c9a4c5}
+    version: 0.0.24
+
   esbuild@0.21.5:
     resolution: {integrity: sha512-mg3OPMV4hXywwpoDxu3Qda5xCKQi+vCTZq8S9J/EpkhB2HzKXq4SNFZE3+NK93JYxc8VMSep+lOUSC/RVKaBqw==}
     engines: {node: '>=12'}
@@ -308,6 +318,10 @@ packages:
   locate-path@5.0.0:
     resolution: {integrity: sha512-t7hw9pI+WvuwNJXwk5zVHpyhIqzg2qTlklJOf0mVxGSbe3Fp2VieZcduNYjaLDoy6p9uGpQEGWG87WpMKlNq8g==}
     engines: {node: '>=8'}
+
+  m3-dreamland@https://codeload.github.com/mercuryworkshop/m3-dreamland/tar.gz/8976b36b8f0b04532262b2f94bd9a9018cb719a2:
+    resolution: {tarball: https://codeload.github.com/mercuryworkshop/m3-dreamland/tar.gz/8976b36b8f0b04532262b2f94bd9a9018cb719a2}
+    version: 0.0.1
 
   make-dir@3.1.0:
     resolution: {integrity: sha512-g3FeP20LNwhALb/6Cz6Dd4F2ngze0jz7tbzrD2wAV+o9FeNHe4rL+yK2md0J/fiSf1sa1ADhXqi5+oVwOM/eGw==}
@@ -384,6 +398,10 @@ packages:
   universalify@2.0.1:
     resolution: {integrity: sha512-gptHNQghINnc/vTGIk0SOFGFNXw7JVrlRUtConJRlvaw6DuX0wO5Jeko9sWrMBhh+PsYAZ7oXAiOnf/UKogyiw==}
     engines: {node: '>= 10.0.0'}
+
+  uuid@11.0.3:
+    resolution: {integrity: sha512-d0z310fCWv5dJwnX1Y/MncBAqGMKEzlBb1AOf7z9K8ALnd0utBX/msg/fA0+sbyN1ihbMsLhrBlnl1ak7Wa0rg==}
+    hasBin: true
 
   vite-plugin-dreamland@1.2.1:
     resolution: {integrity: sha512-u/CdHcqUet9ejU0N1e4RqtK8NyQR+QUf5AWppbuBe+Cde3qjnYQ2NS56nErBW56Qc0hfxXq/KT3cRTmhGBZ5Ow==}
@@ -496,6 +514,12 @@ snapshots:
     dependencies:
       '@iconify/types': 2.0.0
 
+  '@ktibow/iconset-material-symbols@0.0.1731742403':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@material/material-color-utilities@0.3.0': {}
+
   '@rollup/pluginutils@4.2.1':
     dependencies:
       estree-walker: 2.0.2
@@ -554,6 +578,8 @@ snapshots:
   commondir@1.0.1: {}
 
   dreamland-router@https://codeload.github.com/mercuryworkshop/dreamland-router/tar.gz/4a5bb22dbaa1268159a8e3485200d1d7372483be: {}
+
+  dreamland@https://codeload.github.com/mercuryworkshop/dreamlandjs/tar.gz/7239299486bdc2169686740c3853c3a674c9a4c5: {}
 
   esbuild@0.21.5:
     optionalDependencies:
@@ -614,6 +640,12 @@ snapshots:
   locate-path@5.0.0:
     dependencies:
       p-locate: 4.1.0
+
+  m3-dreamland@https://codeload.github.com/mercuryworkshop/m3-dreamland/tar.gz/8976b36b8f0b04532262b2f94bd9a9018cb719a2:
+    dependencies:
+      '@ktibow/iconset-material-symbols': 0.0.1731742403
+      '@material/material-color-utilities': 0.3.0
+      uuid: 11.0.3
 
   make-dir@3.1.0:
     dependencies:
@@ -690,6 +722,8 @@ snapshots:
   typescript@5.6.3: {}
 
   universalify@2.0.1: {}
+
+  uuid@11.0.3: {}
 
   vite-plugin-dreamland@1.2.1: {}
 
