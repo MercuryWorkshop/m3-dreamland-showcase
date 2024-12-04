@@ -14,9 +14,6 @@ importers:
       dreamland:
         specifier: github:mercuryworkshop/dreamlandjs
         version: https://codeload.github.com/mercuryworkshop/dreamlandjs/tar.gz/7239299486bdc2169686740c3853c3a674c9a4c5
-      dreamland-router:
-        specifier: github:mercuryworkshop/dreamland-router
-        version: https://codeload.github.com/mercuryworkshop/dreamland-router/tar.gz/4a5bb22dbaa1268159a8e3485200d1d7372483be
       m3-dreamland:
         specifier: github:mercuryworkshop/m3-dreamland
         version: https://codeload.github.com/mercuryworkshop/m3-dreamland/tar.gz/8976b36b8f0b04532262b2f94bd9a9018cb719a2
@@ -275,10 +272,6 @@ packages:
 
   commondir@1.0.1:
     resolution: {integrity: sha512-W9pAhw0ja1Edb5GVdIF1mjZw/ASI0AlShXM83UUGe2DVr5TdAPEA1OA8m/g8zWp9x6On7gqufY+FatDbC3MDQg==}
-
-  dreamland-router@https://codeload.github.com/mercuryworkshop/dreamland-router/tar.gz/4a5bb22dbaa1268159a8e3485200d1d7372483be:
-    resolution: {tarball: https://codeload.github.com/mercuryworkshop/dreamland-router/tar.gz/4a5bb22dbaa1268159a8e3485200d1d7372483be}
-    version: 2.0.0
 
   dreamland@https://codeload.github.com/mercuryworkshop/dreamlandjs/tar.gz/7239299486bdc2169686740c3853c3a674c9a4c5:
     resolution: {tarball: https://codeload.github.com/mercuryworkshop/dreamlandjs/tar.gz/7239299486bdc2169686740c3853c3a674c9a4c5}
@@ -576,8 +569,6 @@ snapshots:
   '@types/estree@1.0.6': {}
 
   commondir@1.0.1: {}
-
-  dreamland-router@https://codeload.github.com/mercuryworkshop/dreamland-router/tar.gz/4a5bb22dbaa1268159a8e3485200d1d7372483be: {}
 
   dreamland@https://codeload.github.com/mercuryworkshop/dreamlandjs/tar.gz/7239299486bdc2169686740c3853c3a674c9a4c5: {}
 
